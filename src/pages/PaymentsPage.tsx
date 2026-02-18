@@ -307,17 +307,15 @@ const PaymentsPage: React.FC = () => {
       </div>
 
       {/* ── Active filter pills (mobile) ── */}
-      {(statusFilter !== 'all') && (
+      {statusFilter !== 'all' && (
         <div className="flex gap-2 lg:hidden">
-          {statusFilter !== 'all' && (
-            <button
-              onClick={() => setStatusFilter('all')}
-              className="flex items-center gap-1 px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300 text-xs font-medium"
-            >
-              {statusFilter}
-              <XCircle className="w-3 h-3" />
-            </button>
-          )}
+          <button
+            onClick={() => setStatusFilter('all')}
+            className="flex items-center gap-1 px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300 text-xs font-medium"
+          >
+            {statusFilter}
+            <XCircle className="w-3 h-3" />
+          </button>
         </div>
       )}
 
